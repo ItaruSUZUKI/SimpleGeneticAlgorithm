@@ -7,6 +7,11 @@ import java.util.Random;
 import jp.ac.waseda.SandE.IMSE.hishiyamalab.genetic_algorithm.interfaces.I_Gene;
 import jp.ac.waseda.SandE.IMSE.hishiyamalab.genetic_algorithm.interfaces.I_GeneInitializer;
 
+/**
+ * 初期化．遺伝子は0と1がランダムに並んだ配列となる．
+ * @author ital
+ *
+ */
 public class SampleInitializer implements I_GeneInitializer {
 	private static final Random rnd = new Random();
 

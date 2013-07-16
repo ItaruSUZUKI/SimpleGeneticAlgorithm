@@ -7,6 +7,11 @@ import jp.ac.waseda.SandE.IMSE.hishiyamalab.genetic_algorithm.interfaces.I_Envir
 import jp.ac.waseda.SandE.IMSE.hishiyamalab.genetic_algorithm.interfaces.I_Gene;
 import jp.ac.waseda.SandE.IMSE.hishiyamalab.genetic_algorithm.interfaces.I_GeneSelector;
 
+/**
+ * 適応度の高い順に2つの遺伝子を選択するエリート選択を表すクラス
+ * @author ital
+ *
+ */
 public class EliteSelector implements I_GeneSelector {
 	private I_Environment environment;
 	private I_Gene top;

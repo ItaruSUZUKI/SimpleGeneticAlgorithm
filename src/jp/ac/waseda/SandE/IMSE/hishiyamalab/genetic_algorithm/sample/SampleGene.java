@@ -18,9 +18,14 @@ public class SampleGene implements I_Gene {
 		this.geneList = gene;
 	}
 
+	/**
+	 * このオブジェクトの適応度が与えられたオブジェクトの適応度より大きければ負の数，
+	 * 同じならば0,与えられたオブジェクトの適応度がこのオブジェクトの適応度より大きければ正の数を返す．
+	 * これにより，ソート結果は適応度の降順になる．
+	 */
 	@Override
 	public int compareTo(I_Gene o) {
-		return this.getScore() - o.getScore();
+		return o.getScore() - this.getScore();
 	}
 
 	@Override
@@ -44,6 +49,9 @@ public class SampleGene implements I_Gene {
 		return this.score;
 	}
 
+	/**
+	 * 突然変異．適当な遺伝子座を1つ選んでその値を反転させた新たな遺伝子を返す
+	 */
 	@Override
 	public I_Gene mutate() {
 		Integer pos = rnd.nextInt(SIZE);
@@ -58,6 +66,9 @@ public class SampleGene implements I_Gene {
 		return new SampleGene(newGene);
 	}
 
+	/**
+	 * 交叉．2つの遺伝子からランダムに遺伝子を取得して混ぜあわせた結果が新たな遺伝子に和る．
+	 */
 	@Override
 	public I_Gene cross(I_Gene gene) {
 		List<Integer> newGene = new ArrayList<Integer>(SIZE);

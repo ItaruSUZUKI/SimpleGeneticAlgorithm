@@ -11,7 +11,8 @@ public class SimpleSuccessorMaker implements I_SuccessorMaker {
 	private static final Random rnd = new Random();
 
 	/**
-	 * 上位2つの遺伝子を残す．
+	 * 上位2つの遺伝子を受け取って，次世代の遺伝子群を作る．
+	 * まず，上位2つの遺伝子がそのまま残される．
 	 * 残りの部分には2つの遺伝子を交叉した結果を入れる．
 	 * そして，上位2つの遺伝子以外から1つ選んで突然変異させる．
 	 */
